@@ -9,7 +9,7 @@ class Tree:
         self.max_entries = max_entries
         self.min_entries = min_entries
         self.dimension = dimension
-        self.root = None(is_leaf = True)
+        self.root = Node(is_leaf = True)
 
     def insert(self , rectangle , record_id):
         leaf = self._choose_leaf(self.root, rectangle)
@@ -140,3 +140,8 @@ class Tree:
             for entry in node.entries:
                 if entry.rectangle.intersects(rectangle):
                     self._range_search(entry.child, rectangle, result)
+
+
+
+
+
